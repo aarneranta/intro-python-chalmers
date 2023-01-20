@@ -7,7 +7,7 @@ def final_amount(amount, increase, years):
 
 
 def main():
-    salary = int(input("current salary: "))
+    salary = float(input("current salary: "))
     increase = float(input("yearly raise in percent: "))
     years = int(input("how many years ahead? "))   
     end_salary = final_amount(salary, increase, years)
