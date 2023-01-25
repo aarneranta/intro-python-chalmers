@@ -7,7 +7,6 @@ def mkDict(lines):
         fields = line.split(';')
         if len(fields) >= 2:
             dict[fields[0].strip()] = fields[1].strip()
-    lines.close()
     return dict
 
 def readDict(filename):
@@ -15,9 +14,8 @@ def readDict(filename):
     return mkDict(file)
 
 def readDict1(filename):
-    file = open(filename)
-    lines = file.readlines()
-    file.close()
+    with open(filename) as file:
+        lines = file.readlines()
     return mkDict(lines)
 
 
