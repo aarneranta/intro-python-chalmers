@@ -1,4 +1,4 @@
-# binary conversion and other math functions for lecture 3
+# binary conversion for lecture 3
 
 import math
 
@@ -10,6 +10,8 @@ def bin2dec(bin):
 
 
 def dec2bin(dec):
+    if dec == 0:
+        return '0'
     bin = ""
     while dec > 0:
         bit = str(dec % 2)
@@ -31,4 +33,9 @@ def testDecBin(dec):
         print(dec,bin,"OK")
     else:
         print(dec,bin,bdec,"ERROR")
+
+
+
+
+        
 
