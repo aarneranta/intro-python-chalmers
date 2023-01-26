@@ -9,11 +9,8 @@ def mkDict(lines):
             dict[fields[0].strip()] = fields[1].strip()
     return dict
 
-def readDict(filename):
-    file = open(filename)
-    return mkDict(file)
 
-def readDict1(filename):
+def readDict(filename):
     with open(filename) as file:
         lines = file.readlines()
     return mkDict(lines)
@@ -21,7 +18,9 @@ def readDict1(filename):
 
 def main():
     filename = sys.argv[1]
+    print('reading', filename)
     dict = readDict(filename)
+    print('dictionary size', len(dict))
     prompt = "ange sökord+enter, sluta med enter> "
     query = input(prompt)
     while query:
