@@ -19,7 +19,7 @@ def monthLength(year, month):
     else:
         return 31
 
-    
+
 def dateDays(year, month, day):
     yeardays = 0
     for y in range(year):
@@ -28,7 +28,7 @@ def dateDays(year, month, day):
     for m in range(1, month):
         monthdays = monthdays + monthLength(year, m)
     days = yeardays + monthdays + day
-    return(days)
+    return days
 
 
 
@@ -46,8 +46,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
 
